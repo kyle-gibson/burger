@@ -14,7 +14,7 @@ if(process.env.JAWSDB_URL){
     });
 }
 
-connection.connect((err ) =>
+connection.connect((err ) => {
     if (err) {
         console.error("error connecting: " + err.stack);
         return;
