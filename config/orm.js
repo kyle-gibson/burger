@@ -15,3 +15,35 @@ const objToSql = ob => {
     return arr.toString();
 };
 
+const orm = {
+    selectAll: function(table, cb){
+        let queryString = "SELECT * FROM " + table + ";";
+        connection.query(queryString, function(err, result){
+            if (err){
+                throw err;
+            }
+            cb(result);
+        });
+    },
+    insertOne: function(table, cols, vals, cb){
+        let queryString = "INSERT INTO " + table;
+        connection.query(queryString, vals, function(err, result){
+            if (err){
+                throw err;
+            }
+            cb(result);
+        });
+    },
+    updateONE: function(table, vals, condition, cb){
+        let queryString = "UPDATE " + table;
+        connection.query(queryString, function(err, result){
+            if (err){
+                throw err;
+            }
+            cb(result);
+        });
+    },
+}
+
+
+
