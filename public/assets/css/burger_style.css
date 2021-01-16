@@ -1,0 +1,14 @@
+h1 {
+    margin: auto;
+    text-align: center;
+}
+
+body {
+    background-color: white;
+}
+
+button {
+    border: thin;
+    font-weight: 500;
+}
+
