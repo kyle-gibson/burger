@@ -7,6 +7,6 @@ drop table burgers;
 CREATE TABLE burgers (
     id INT NOT NULL AUTO_INCREMENT,
     burger_name VARCHAR(150) NOT NULL,
-    devoured BOOLEAN, 
+    devoured BOOLEAN default false, 
     PRIMARY KEY (id)
 );
